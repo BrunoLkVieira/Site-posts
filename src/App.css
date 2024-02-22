@@ -1,38 +1,240 @@
-.App {
+*{
+  margin:0;
+  padding: 0;
+}
+
+
+.header{
+  background-color: white;
+  border-bottom: solid rgb(185, 181, 181) 1px;
+  padding: 20px 10px 10px;
+}
+
+body{
+  background-color: rgb(231, 231, 231);
+}
+
+.center{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.header_logo{
+  width: 50%;
+  text-align: left;
+}
+
+.header_loginForm{
+  width: 50%;
+  text-align: right;
+}
+
+.header_loginForm input[type=text], 
+.header_loginForm input[type=password]{
+  width: 120px;
+  padding: 0 5px;
+  margin: 5px
+
+}
+
+.header_loginForm input[type=submit]{
+  background-color: rgb(0, 149, 246);
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 7px 10px;
+  font-weight: bold;
+  border: none;
+  
+}
+
+.header_loginForm a{
+  font-size: 14px;
+  margin: 0 10px;
+  color:  rgb(0, 149, 246);
+  border-bottom: 1px solid rgb(0, 149, 246) ;
+  cursor: pointer;
+}
+
+
+.header_post{
+  width: 50%;
+  justify-content: end;
+  display: flex;
+}
+
+.header_post span{
+  font-size: 16px;
+  justify-items: center;
+  margin: 3px 10px 0 0
+}
+
+.header_post a{
+  background-color: rgb(0, 149, 246);
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 0 10px;
+  padding: 5px 13px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.logout {
+  font-size: 12px !important; 
+  color:rgb(0, 149, 246);
+  margin: 6px 0 0 10px !important;
+  cursor: pointer;
+} 
+
+
+.modalcriarconta{
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.473);
+  display: none;
+}
+
+.formcriarconta{
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
   text-align: center;
 }
+.formcriarconta h2{
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+.formcriarconta input{
+  width: 100%;
+  max-width: 600px;
+  padding: 5px 0 5px 20px;  
+  margin-bottom: 15px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.formcriarconta input[type="submit"]{
+  background-color:  rgb(0, 149, 246);
   color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  width: 100%;
+  max-width: 625px;
+  padding: 10px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.close-modal{
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: rgb(0, 149, 246);
+  border-radius: 50px;
+  padding: 2px 7px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+.modalupload{
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.473);
+  display: none;
+}
+
+.formupload{
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+}
+.formupload h2{
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+.formupload  input{
+  width: 100%;
+  max-width: 600px;
+  padding: 5px 0 5px 20px;  
+  margin-bottom: 15px;
+  margin-top: 5px;
+
+}
+
+.formupload  input[type="submit"]{
+  background-color:  rgb(0, 149, 246);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  width: 100%;
+  max-width: 625px;
+  padding: 10px 0;
+}
+
+
+.postsingle{
+  background-color: white;
+  max-width: 700px;
+  margin:100px auto;
+  padding: 10px;
+  border: 2px solid rgba(15, 15, 15, 0.644);
+}
+
+.postsingle img{
+   width: 100%;
+   border: 1px solid;
+  
+}
+
+.postsingle p{
+  margin: 20px 5px;
+}
+
+.postsingle textarea{
+  min-width: 98%;
+  max-width: 98%;
+  min-height: 120px;
+  max-height: 120px;
+  border: 1px solid gray;
+  padding: 10px 0 0 10px;
+  
+}
+
+.postsingle input{
+  background-color:  rgb(0, 149, 246);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  width: 100px;
+  padding: 5px 0;
+  margin: 5px 0;
+  border: 0;
 }
